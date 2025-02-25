@@ -2,6 +2,7 @@ import SectionA from "@/components/SectionA";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Form from 'next/form';
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -20,10 +21,11 @@ export default function Home() {
                     </a>
                 </div>
                 <div className="img-box relative h-96 md:h-full bg-primary">
-                    <img
+                    <Image
                         src="/media/4.jpg"
                         alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
+                        fill
+                        className="object-cover object-center opacity-90"
                     />
                 </div>
             </section>

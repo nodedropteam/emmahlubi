@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from './ui/button'
+import Image from 'next/image'
 
 export default function SectionA({ headline, subheadline, link, imageUrl, scrollSection }: any) {
     return (
@@ -12,10 +13,11 @@ export default function SectionA({ headline, subheadline, link, imageUrl, scroll
                 </a>
             </div>
             <div className="img-box relative h-96 md:h-full">
-                <img
+                <Image
                     src={imageUrl}
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover object-center"
+                    fill
+                    className="object-cover object-center"
                 />
             </div>
         </section>
