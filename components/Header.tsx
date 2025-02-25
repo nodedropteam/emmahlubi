@@ -4,6 +4,8 @@ import React from 'react'
 import { Button } from './ui/button'
 import useScrollThreshold from '@/hooks/use-scroll';
 import { LuAlignRight } from "react-icons/lu";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
     const hasScrolledPast = useScrollThreshold(100);
@@ -12,9 +14,9 @@ export default function Header() {
         <header className={`full content-grid fixed top-0 w-full h-[120px] 2xl:h-[200px] items-center z-[99] transition-colors duration-150 ${hasScrolledPast ? "text-foreground bg-background" : "text-background bg-transparent"}`}>
             <div className="wrapper">
                 <div className="content flex flex-wrap justify-between items-center">
-                    <a href="/" className="logo">
-                        <img src="/media/logo.png" alt="Emmahlubi Logo" className='h-[40px]' />
-                    </a>
+                    <Link href="/" className="logo">
+                        <Image src="/media/logo.png" alt="Emmahlubi Logo" width={200} height={40} />
+                    </Link>
                     <nav className="nav flex items-center">
                         <ul className="hidden md:flex flex-wrap gap-6">
                             <li>

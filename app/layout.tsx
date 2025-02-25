@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SuspenseProvider } from "@/components/SuspenseProvider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -29,11 +30,13 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <div className="content-grid w-full max-w-full h-full relative min-h-screen">
-                    <Header />
-                    {children}
-                    <Footer />
-                </div>
+                <SuspenseProvider>
+                    <div className="content-grid w-full max-w-full h-full relative min-h-screen">
+                        <Header />
+                        {children}
+                        <Footer />
+                    </div>
+                </SuspenseProvider>
             </body>
         </html>
     );

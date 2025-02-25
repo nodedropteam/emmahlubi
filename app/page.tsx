@@ -123,11 +123,14 @@ export default function Home() {
             </section>
 
             <section id="cta-form" className="feature py-28">
-                <img
-                    src="/media/9.jpg"
-                    alt=""
-                    className="h-[400px] lg:h-[600px] w-full object-cover"
-                />
+                <div className="relative h-[400px] lg:h-[600px] w-full">
+                    <Image
+                        src="/media/9.jpg"
+                        alt=""
+                        fill
+                        className="object-cover"
+                    />
+                </div>
                 <div className="content text-center max-w-[768px] mx-auto space-y-4">
                     <h1>Have us secure your future, while you grow.</h1>
                     <p>Leave us your email and we’ll contact you about our services.</p>

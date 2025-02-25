@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation"; // Use the Next.js hook
 import { sendEmail } from "@/server/sendEmail";
+import Image from "next/image";
 
 export default function ThankyouPage() {
     const searchParams = useSearchParams(); // Extract searchParams dynamically
@@ -35,10 +36,11 @@ export default function ThankyouPage() {
                 {emailSent && <p className="text-(length:--text--1) text-gray-500">Confirmation email sent.</p>}
             </div>
             <div className="img-box relative h-96 md:h-full bg-primary">
-                <img
+                <Image
                     src="/media/4.jpg"
                     alt=""
-                    className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
+                    fill
+                    className="object-cover object-center opacity-90"
                 />
             </div>
         </section>

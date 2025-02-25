@@ -1,6 +1,7 @@
 import React from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
+import Link from 'next/link'
 
 export default function Footer() {
     return (
@@ -33,18 +34,17 @@ export default function Footer() {
                                 <h4 className="title">Services</h4>
                                 <ul className="space-y-2">
                                     <li>
-                                        <a href="/#accounting"
-                                        >Accounting & Bookkeeping</a
-                                        >
+                                        <Link href="/#accounting"
+                                        >Accounting & Bookkeeping</Link>
                                     </li>
                                     <li>
-                                        <a href="/#payroll">Payroll</a>
+                                        <Link href="/#payroll">Payroll</Link>
                                     </li>
                                     <li>
-                                        <a href="/#tax-prep">Tax Preparation</a>
+                                        <Link href="/#tax-prep">Tax Preparation</Link>
                                     </li>
                                     <li>
-                                        <a href="/#finance-advice">Consultation</a>
+                                        <Link href="/#finance-advice">Consultation</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -63,20 +63,19 @@ export default function Footer() {
                                 <h4 className="title">Company</h4>
                                 <ul className="space-y-2">
                                     <li>
-                                        <a href="/">Home</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="/about-us">About Us</a>
+                                        <Link href="/">Home</Link>
                                     </li>
                                     <li>
-                                        <a href="/careers">Careers</a>
+                                        <Link href="/about-us">About Us</Link>
                                     </li>
                                     <li>
-                                        <a href="/faq">FAQ</a>
+                                        <Link href="/careers">Careers</Link>
                                     </li>
                                     <li>
-                                        <a href="/client-portal">Client Portal</a>
+                                        <Link href="/faq">FAQ</Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/client-portal">Client Portal</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -84,15 +83,14 @@ export default function Footer() {
                                 <div className="title"></div>
                                 <ul className="text-sm">
                                     <li>
-                                        <a href="/terms-and-conditions"
-                                        >Terms and Conditions</a
-                                        >
+                                        <Link href="/terms-and-conditions"
+                                        >Terms and Conditions</Link>
                                     </li>
                                     <li>
-                                        <a href="/privacy-policy">Privacy Policy</a>
+                                        <Link href="/privacy-policy">Privacy Policy</Link>
                                     </li>
                                     <li>
-                                        <a href="/security">Security</a>
+                                        <Link href="/security">Security</Link>
                                     </li>
                                 </ul>
                             </div>
