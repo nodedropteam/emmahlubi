@@ -8,8 +8,8 @@ export default function Home() {
     return (
         <>
             <section className="full full-width-split-screen min-h-screen">
-                <div className="content space-y-4 grid content-center justify-items-start py-12 max-md:pt-[100px]">
-                    <h1>Your partners for finance and accounting solutions</h1>
+                <div className="content space-y-4 grid content-center justify-items-start py-12 max-md:pt-[140px]">
+                    <h1 className="font-semibold">Your partners for finance and accounting solutions</h1>
                     <p>
                         Whether you're planning for growth, navigating compliance, or
                         managing financial complexities, we are here to support you

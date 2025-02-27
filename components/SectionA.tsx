@@ -13,7 +13,7 @@ interface props {
 export default function SectionA({ headline, subheadline, link, imageUrl, scrollSection }: props) {
     return (
         <section id={scrollSection} className="full full-width-split-screen min-h-[500px]">
-            <div className="content space-y-4 grid content-center justify-items-start max-w-lg max-sm:py-12">
+            <div className="content space-y-4 grid content-center justify-items-start max-w-lg py-12">
                 <h2>{headline}</h2>
                 <p>{subheadline}</p>
                 <a href={link}>
