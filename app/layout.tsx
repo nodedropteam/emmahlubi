@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SuspenseProvider } from "@/components/SuspenseProvider";
+import SmoothScrollProvider from "@/components/smooth-scroll";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -26,18 +27,20 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                <SuspenseProvider>
-                    <div className="content-grid w-full max-w-full h-full relative min-h-screen">
-                        <Header />
-                        {children}
-                        <Footer />
-                    </div>
-                </SuspenseProvider>
-            </body>
-        </html>
+        <SmoothScrollProvider>
+            <html lang="en">
+                <body
+                    className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                >
+                    <SuspenseProvider>
+                        <div className="content-grid w-full max-w-full h-full relative min-h-screen">
+                            <Header />
+                            {children}
+                            <Footer />
+                        </div>
+                    </SuspenseProvider>
+                </body>
+            </html>
+        </SmoothScrollProvider>
     );
 }

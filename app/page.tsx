@@ -1,3 +1,5 @@
+import FadeLeft from "@/components/animations/fade-left";
+import FadeIn from "@/components/animations/fadein";
 import SectionA from "@/components/SectionA";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,26 +10,30 @@ export default function Home() {
     return (
         <>
             <section className="full full-width-split-screen min-h-screen">
-                <div className="content space-y-4 grid content-center justify-items-start py-12 max-md:pt-[140px]">
-                    <h1 className="font-semibold">Your partners for finance and accounting solutions</h1>
-                    <p>
-                        Whether you're planning for growth, navigating compliance, or
-                        managing financial complexities, we are here to support you
-                        every step of the way.
-                    </p>
+                <div className="content grid content-center justify-items-start py-12 max-md:pt-[140px]">
+                    <FadeIn>
+                        <div className="stack space-y-4">
+                            <h1 className="font-semibold">Your partners for finance and accounting solutions</h1>
+                            <p>
+                                Whether you're planning for growth, navigating compliance, or
+                                managing financial complexities, we are here to support you
+                                every step of the way.
+                            </p>
 
-                    <a href="#cta-form">
-                        <Button>Meet an advisor</Button>
-                    </a>
+                            <a href="#cta-form">
+                                <Button>Meet an advisor</Button>
+                            </a>
+                        </div>
+                    </FadeIn>
                 </div>
-                <div className="img-box relative h-96 md:h-full bg-primary">
+                <FadeLeft className="img-box relative h-96 md:h-full bg-primary">
                     <Image
                         src="/media/4.jpg"
                         alt=""
                         fill
                         className="object-cover object-center opacity-90"
                     />
-                </div>
+                </FadeLeft>
             </section>
             <SectionA
                 headline="Accounting and Bookkeping"
@@ -53,7 +59,7 @@ export default function Home() {
             />
             <SectionA
                 headline="Financial advisory for SMEs"
-                subheadline="Strategic insihts to drive growth, profitability and financial stability."
+                subheadline="Strategic insights to drive growth, profitability and financial stability."
                 imageUrl="/media/3.jpg"
                 scrollSection="advisory"
                 link="/#cta-form"
@@ -132,7 +138,7 @@ export default function Home() {
                     />
                 </div>
                 <div className="content text-center max-w-[768px] mx-auto space-y-4">
-                    <h1>Have us secure your future, while you grow.</h1>
+                    <h1>Let us keep you compliant, while you focus on growth.</h1>
                     <p>Leave us your email and we’ll contact you about our services.</p>
                     <Form action="/thank-you">
                         <div

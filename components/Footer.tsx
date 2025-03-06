@@ -35,7 +35,7 @@ export default function Footer() {
                                 <ul className="space-y-2">
                                     <li>
                                         <Link href="/#accounting"
-                                        >Accounting & Bookkeeping</Link>
+                                        >Accounting</Link>
                                     </li>
                                     <li>
                                         <Link href="/#payroll">Payroll</Link>
