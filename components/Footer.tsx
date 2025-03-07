@@ -21,7 +21,7 @@ export default function Footer() {
                                     type="email"
                                     name="email"
                                     id="email"
-                                    className=""
+                                    className="border-background"
                                     placeholder="email"
                                 />
                                 <Button type="submit" variant={`default`}>Submit</Button>

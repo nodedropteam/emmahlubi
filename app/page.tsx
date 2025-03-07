@@ -1,10 +1,10 @@
 import FadeLeft from "@/components/animations/fade-left";
 import FadeIn from "@/components/animations/fadein";
-import SectionA from "@/components/SectionA";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Form from 'next/form';
 import Image from "next/image";
+import { ourValues, services } from "@/content";
 
 export default function Home() {
     return (
@@ -35,35 +35,41 @@ export default function Home() {
                     />
                 </FadeLeft>
             </section>
-            <SectionA
-                headline="Accounting and Bookkeping"
-                subheadline="Accurate and timely financial management to keep your business operations smooth and compliant."
-                imageUrl="/media/5.jpg"
-                scrollSection="accounting"
-                link="/#cta-form"
-            />
-
-            <SectionA
-                headline="Payroll solutions"
-                subheadline="Reliable payroll services that ensure your employees are paid on time, every time."
-                imageUrl="/media/6.jpg"
-                scrollSection="payroll"
-                link="/#cta-form"
-            />
-            <SectionA
-                headline="Tax prep and compliance"
-                subheadline="Expert guidance to navigate tax regulations, optimize deductions, and remain compliant."
-                imageUrl="/media/2.jpg"
-                scrollSection="tax"
-                link="/#cta-form"
-            />
-            <SectionA
-                headline="Financial advisory for SMEs"
-                subheadline="Strategic insights to drive growth, profitability and financial stability."
-                imageUrl="/media/3.jpg"
-                scrollSection="advisory"
-                link="/#cta-form"
-            />
+            {
+                services.map((item, index) => (
+                    <section id={item.scrollSection} key={index} className="service-card min-h-[500px] flex py-20">
+                        <div className={`stack flex flex-wrap w-full lg:max-w-[80%] mx-auto ${index / 2 === 0}`}>
+                            <div className="content w-full md:w-[35%] grow">
+                                <div className="stack space-y-4 grid justify-items-start max-w-sm py-12">
+                                    <h2>{item.headline}</h2>
+                                    <p>{item.description}</p>
+                                    <a href={`/#contact`}>
+                                        <Button variant={`outline`}>Learn more</Button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="content w-full md:w-[35%] grow relative">
+                                <div className='relative w-auto h-auto'>
+                                    <Image
+                                        src={item.image}
+                                        alt=""
+                                        width={350}
+                                        height={350}
+                                        className=""
+                                    />
+                                    {/* <div className="absolute top-4 left-4 grid gap-4 p-4 bg-white rounded-2xl shadow-lg">
+                                        {item.insights.map((insight, i) => (
+                                            <div key={i} className="bg-primary text-white p-4 rounded-xl shadow-md">
+                                                {insight}
+                                            </div>
+                                        ))}
+                                    </div> */}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                ))
+            }
 
             <section className="py-28">
                 <div className="inner space-y-12">
@@ -75,55 +81,16 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="content flex flex-wrap gap-8">
-                        <div className="card sm:pr-[10%] w-full sm:w-[35%] lg:w-1/4 grow">
-                            <h4>Excellence & Accuracy</h4>
-                            <p>
-                                We deliver precise, high-quality results that you can
-                                rely on.
-                            </p>
-                        </div>
-
-                        <div className="card sm:pr-[10%] w-full sm:w-[35%] lg:w-1/4 grow">
-                            <h4>Collboration & Accountability</h4>
-                            <p>
-                                We work hand-in-hand with clients to achieve shared
-                                goals.
-                            </p>
-                        </div>
-
-                        <div className="card sm:pr-[10%] w-full sm:w-[35%] lg:w-1/4 grow">
-                            <h4>Integrity & Transparency</h4>
-                            <p>
-                                We operate with honesty and clarity in all that we do.
-                            </p>
-                        </div>
-
-                        <div className="card sm:pr-[10%] w-full sm:w-[35%] lg:w-1/4 grow">
-                            <h4>Trusted Advisors</h4>
-                            <p>
-                                We believe your accountant should be your most trusted
-                                advisor. We take pride in offering personalized support
-                                tailored to your business goals.
-                            </p>
-                        </div>
-
-                        <div className="card sm:pr-[10%] w-full sm:w-[35%] lg:w-1/4 grow">
-                            <h4>Client-Centric Approach</h4>
-                            <p>
-                                Your vision matters to us. We invite you to sit with us,
-                                have a coffee, and plan your future while we handle your
-                                financial needs.
-                            </p>
-                        </div>
-
-                        <div className="card sm:pr-[10%] w-full sm:w-[35%] lg:w-1/4 grow">
-                            <h4>Commitment to Excellence</h4>
-                            <p>
-                                Our team upholds the highest standards of accuracy,
-                                transparency, and accountability to help your business
-                                thrive.
-                            </p>
-                        </div>
+                        {
+                            ourValues.map((item, index) => (
+                                <div key={index} className="card w-full sm:w-[35%] lg:w-1/4 grow">
+                                    <div className="content max-w-sm">
+                                        <h4 className="mb-2">{item.title}</h4>
+                                        <p>{item.description}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </section>

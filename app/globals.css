@@ -120,3 +120,17 @@
     }
 
 }
+
+
+/* select every odd child and give it a row reverse */
+.service-card:nth-child(even)>.stack {
+    flex-direction: row-reverse;
+}
+
+.service-card:nth-child(even)>.stack .service-feature:nth-child(odd) {
+    transform: translateX(-100%) !important;
+}
+
+.service-feature:nth-child(odd) {
+    transform: translateX(50%) !important;
+}
