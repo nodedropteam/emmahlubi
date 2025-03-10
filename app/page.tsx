@@ -1,4 +1,3 @@
-import FadeLeft from "@/components/animations/fade-left";
 import FadeIn from "@/components/animations/fadein";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
