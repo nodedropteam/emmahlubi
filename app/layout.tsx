@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SuspenseProvider } from "@/components/SuspenseProvider";
 import SmoothScrollProvider from "@/components/smooth-scroll";
+import PatternBackground from "@/components/pattern-background";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -33,11 +34,14 @@ export default function RootLayout({
                     className={`${geistSans.variable} ${geistMono.variable} antialiased`}
                 >
                     <SuspenseProvider>
-                        <div className="content-grid w-full max-w-full h-full relative min-h-screen">
-                            <Header />
-                            {children}
-                            <Footer />
-                        </div>
+                        <main className="min-h-screen w-full relative overflow-hidden bg-background">
+                            {/* <PatternBackground /> */}
+                            <div className="content-grid w-full max-w-full h-full relative min-h-screen">
+                                <Header />
+                                {children}
+                                <Footer />
+                            </div>
+                        </main>
                     </SuspenseProvider>
                 </body>
             </html>

@@ -12,7 +12,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className={`full content-grid fixed top-0 w-full h-[120px] 2xl:h-[200px] items-center z-[99] transition-colors duration-150 ${hasScrolledPast ? "text-foreground bg-background" : "text-background bg-transparent"}`}>
+        <header className={`full content-grid fixed top-0 w-full h-[120px] 2xl:h-[200px] items-center z-[99] transition-colors duration-150 ${hasScrolledPast ? "text-secondary-foreground bg-secondary" : "bg-transparent"}`}>
             <div className="wrapper">
                 <div className="content flex flex-wrap justify-between items-center">
                     <Link href="/" className="logo block z-[100]">

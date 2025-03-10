@@ -5,16 +5,18 @@ import { Input } from "@/components/ui/input";
 import Form from 'next/form';
 import Image from "next/image";
 import { ourValues, services } from "@/content";
+import PatternBackground from "@/components/pattern-background";
 
 export default function Home() {
     return (
         <>
-            <section className="full full-width-split-screen min-h-screen">
-                <div className="content grid content-center justify-items-start py-12 max-md:pt-[140px]">
+            <section className="full px-4 relative">
+                <PatternBackground />
+                <div className="inner min-h-screen grid place-content-center">
                     <FadeIn>
-                        <div className="stack space-y-4">
-                            <h1 className="font-semibold">Your partners for finance and accounting solutions</h1>
-                            <p>
+                        <div className="stack space-y-4 text-center w-full mx-auto container">
+                            <h1 className="font-semibold text-10xl">Your partners for finance and accounting solutions</h1>
+                            <p className="text-xl max-w-[60ch] mx-auto">
                                 Whether you're planning for growth, navigating compliance, or
                                 managing financial complexities, we are here to support you
                                 every step of the way.
@@ -26,15 +28,8 @@ export default function Home() {
                         </div>
                     </FadeIn>
                 </div>
-                <FadeLeft className="img-box relative h-96 md:h-full bg-primary">
-                    <Image
-                        src="/media/4.jpg"
-                        alt=""
-                        fill
-                        className="object-cover object-center opacity-90"
-                    />
-                </FadeLeft>
             </section>
+
             {
                 services.map((item, index) => (
                     <section id={item.scrollSection} key={index} className="service-card min-h-[500px] flex py-20">
@@ -48,7 +43,7 @@ export default function Home() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="content w-full md:w-[35%] grow relative">
+                            <div className="content w-full md:w-[35%] grow relative flex">
                                 <div className='relative w-auto h-auto'>
                                     <Image
                                         src={item.image}
@@ -57,14 +52,14 @@ export default function Home() {
                                         height={350}
                                         className=""
                                     />
-                                    {/* <div className="absolute top-4 left-4 grid gap-4 p-4 bg-white rounded-2xl shadow-lg">
+                                </div>
+                                {/* <div className="insight-list relative w-[100px]">
                                         {item.insights.map((insight, i) => (
-                                            <div key={i} className="bg-primary text-white p-4 rounded-xl shadow-md">
+                                            <div key={i} className="absolute bg-white text-foreground p-2 rounded-xl text-sm w-fit">
                                                 {insight}
                                             </div>
                                         ))}
-                                    </div> */}
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </section>
@@ -105,7 +100,7 @@ export default function Home() {
                     />
                 </div>
                 <div className="content text-center max-w-[768px] mx-auto space-y-4">
-                    <h1>Let us keep you compliant, while you focus on growth.</h1>
+                    <h2>Let us keep you compliant, while you focus on growth.</h2>
                     <p>Leave us your email and we’ll contact you about our services.</p>
                     <Form action="/thank-you">
                         <div

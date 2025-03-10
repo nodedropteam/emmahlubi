@@ -29,14 +29,15 @@
 
 
     /* TYPOGRAPHY */
-    --text--2: clamp(0.64rem, 0.71rem + -0.0778vw, 0.6944rem);
-    --text--1: clamp(0.8rem, 0.8429rem + -0.0476vw, 0.8333rem);
+    --text--2: clamp(0.5628rem, 0.7434rem + -0.245vw, 0.6944rem);
+    --text--1: clamp(0.7502rem, 0.8643rem + -0.1547vw, 0.8333rem);
     --text-0: clamp(1rem, 1rem + 0vw, 1rem);
-    --text-1: clamp(1.2rem, 1.1857rem + 0.0714vw, 1.25rem);
-    --text-2: clamp(1.44rem, 1.405rem + 0.175vw, 1.5625rem);
-    --text-3: clamp(1.728rem, 1.6637rem + 0.3216vw, 1.9531rem);
-    --text-4: clamp(2.0736rem, 1.9685rem + 0.5254vw, 2.4414rem);
-    --text-5: clamp(2.4883rem, 2.3273rem + 0.8049vw, 3.0518rem);
+    --text-1: clamp(1.2rem, 1.1505rem + 0.2474vw, 1.333rem);
+    --text-2: clamp(1.44rem, 1.3146rem + 0.6268vw, 1.7769rem);
+    --text-3: clamp(1.728rem, 1.4896rem + 1.1918vw, 2.3686rem);
+    --text-4: clamp(2.0736rem, 1.6703rem + 2.0163vw, 3.1573rem);
+    --text-5: clamp(2.4883rem, 1.8482rem + 3.2008vw, 4.2087rem);
+    --text-6: clamp(2.986rem, 2.0095rem + 4.8823vw, 5.6102rem);
 }
 
 @theme inline {
@@ -99,6 +100,10 @@
         @apply text-pretty
     }
 
+    .text-10xl {
+        @apply text-(length:--text-6);
+    }
+
     h1,
     .h1 {
         @apply text-(length:--text-5);
@@ -118,7 +123,6 @@
     .h4 {
         @apply text-(length:--text-2) font-bold;
     }
-
 }
 
 
@@ -133,4 +137,19 @@
 
 .service-feature:nth-child(odd) {
     transform: translateX(50%) !important;
+}
+
+@keyframes zoom {
+    0%,
+    100% {
+        background-size: 20px 20px;
+    }
+
+    50% {
+        background-size: 25px 25px;
+    }
+}
+
+.animate-zoom {
+    animation: zoom 20s infinite ease-in-out;
 }
