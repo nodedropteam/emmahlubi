@@ -5,7 +5,7 @@ export const ourValues = [
         icon: ""
     },
     {
-        title: "Collboration & Accountability",
+        title: "Collaboration & Accountability",
         description: "We work hand-in-hand with clients to achieve shared goals.",
         icon: ""
     },
