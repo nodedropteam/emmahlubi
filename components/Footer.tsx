@@ -2,7 +2,7 @@ import React from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { services, footer, resources, company } from '@/config/menu'
+import { services, footer, company } from '@/config/menu'
 
 export default function Footer() {
     return (
