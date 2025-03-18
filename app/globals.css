@@ -97,7 +97,7 @@
 
     p,
     li {
-        @apply text-pretty
+        @apply text-pretty;
     }
 
     .text-10xl {
@@ -119,9 +119,39 @@
         @apply text-(length:--text-3);
     }
 
+    h5,
+    .h5 {
+        @apply text-(length:--text-1) font-bold;
+    }
+
     h4,
     .h4 {
         @apply text-(length:--text-2) font-bold;
+    }
+
+
+    .prose {
+        h1,h2,h3,h4,h5 {
+            @apply mt-8 mb-2;
+        }
+        p, li {
+            @apply mb-2 text-pretty;
+        }
+        h1 {
+            @apply text-(length:--text-3);
+        }
+
+        h2 {
+            @apply text-(length:--text-2);
+        }
+
+        h3 {
+            @apply text-(length:--text-1);
+        }
+
+        a {
+            @apply hover:underline;
+        }
     }
 }
 
@@ -153,3 +183,4 @@
 .animate-zoom {
     animation: zoom 20s infinite ease-in-out;
 }
+

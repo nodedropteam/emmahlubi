@@ -36,7 +36,7 @@ export const services = [
         headline: "Accounting and Bookkeeping",
         description: "Accurate and timely financial management to keep your business operations smooth and compliant.",
         image: "/media/Accountant-pana.svg",
-        scrollSection: "",
+        scrollSection: "accounting",
         insights: [
             "Testing the features cards out add some figures.",
             "Testing the features cards out add some figures.",
@@ -47,7 +47,7 @@ export const services = [
         headline: "Payroll Solutions",
         description: "We help SMMEs overcome unique challenges with tailored solutions for growth, profitability, and long-term security.",
         image: "/media/Manage money-pana.svg",
-        scrollSection: "",
+        scrollSection: "payroll",
         insights: [
             "Testing the features cards out add some figures.",
             "Testing the features cards out add some figures.",
@@ -58,7 +58,7 @@ export const services = [
         headline: "Tax prep and compliance",
         description: "Expert guidance to navigate tax regulations, optimize deductions, and remain compliant.",
         image: "/media/Tax-amico.svg",
-        scrollSection: "",
+        scrollSection: "taxes",
         insights: [
             "Testing the features cards out add some figures.",
             "Testing the features cards out add some figures.",
@@ -69,7 +69,7 @@ export const services = [
         headline: "Financial advisory for SMEs",
         description: "Strategic insights to drive growth, profitability and financial stability.",
         image: "/media/Investment data-rafiki.svg",
-        scrollSection: "",
+        scrollSection: "consultation",
         insights: [
             "Testing the features cards out add some figures.",
             "Testing the features cards out add some figures.",

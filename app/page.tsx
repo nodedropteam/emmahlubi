@@ -29,6 +29,7 @@ export default function Home() {
                 </div>
             </section>
 
+            <div id="our-services" aria-hidden className="div"></div>
             {
                 services.map((item, index) => (
                     <section id={item.scrollSection} key={index} className="service-card min-h-[500px] flex py-20">
@@ -52,20 +53,13 @@ export default function Home() {
                                         className=""
                                     />
                                 </div>
-                                {/* <div className="insight-list relative w-[100px]">
-                                        {item.insights.map((insight, i) => (
-                                            <div key={i} className="absolute bg-white text-foreground p-2 rounded-xl text-sm w-fit">
-                                                {insight}
-                                            </div>
-                                        ))}
-                                </div> */}
                             </div>
                         </div>
                     </section>
                 ))
             }
 
-            <section className="py-28">
+            <section id="our-values" className="py-28">
                 <div className="inner space-y-12">
                     <div className="content max-w-[400px] space-y-2">
                         <h2>Empowering your success.</h2>
@@ -89,14 +83,13 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="cta-form" className="feature py-28">
+            <section id="contact-us" className="feature py-28">
                 <div className="relative h-[400px] lg:h-[600px] w-full">
                     <Image
+                        className="object-cover"
                         src="/media/9.jpg"
                         alt=""
-                        fill
-                        className="object-cover"
-                    />
+                        fill />
                 </div>
                 <div className="content text-center max-w-[768px] mx-auto space-y-4">
                     <h2>Let us keep you compliant, while you focus on growth.</h2>

@@ -6,6 +6,7 @@ import useScrollThreshold from '@/hooks/use-scroll';
 import { LuAlignRight } from "react-icons/lu";
 import Image from 'next/image';
 import Link from 'next/link';
+import { mainMenu } from '@/config/menu';
 
 export default function Header() {
     const hasScrolledPast = useScrollThreshold(100);
@@ -20,47 +21,31 @@ export default function Header() {
                     </Link>
                     <nav className="nav flex items-center">
                         <ul className="hidden md:flex flex-wrap gap-6">
-                            <li>
-                                <a href="#advisory" onClick={() => setIsOpen(!isOpen)}>
-                                    <Button
-                                        variant={`ghost`}
-                                        size={`sm`}>Advisory</Button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#about-us" onClick={() => setIsOpen(!isOpen)}>
-                                    <Button
-                                        variant={`ghost`}
-                                        size={`sm`}>About us</Button>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact-us" onClick={() => setIsOpen(!isOpen)}>
-                                    <Button
-                                        variant={`ghost`}
-                                        size={`sm`}>Contact us</Button>
-                                </a>
-                            </li>
+                            {
+                                mainMenu.links.map((link, index) =>
+                                    <li key={index}>
+                                        <Link href={link.url}>
+                                            <Button
+                                                variant={`ghost`}
+                                                size={`sm`}>{link.text}</Button>
+                                        </Link>
+                                    </li>
+                                )
+                            }
                         </ul>
                         {
                             isOpen && (
                                 <div id='mobile-menu' className='mobile-menu fixed sm:hidden top-0 left-0 w-full h-full bg-background text-foreground pt-[100px]'>
                                     <ul className='w-full'>
-                                        <li>
-                                            <a href="#advisory">
-                                                <Button variant={`ghost`} size={`lg`} className='w-full'>Advisory</Button>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#about-us">
-                                                <Button variant={`ghost`} size={`lg`} className='w-full'>About us</Button>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#contact-us">
-                                                <Button variant={`ghost`} size={`lg`} className='w-full'>Contact us</Button>
-                                            </a>
-                                        </li>
+                                        {
+                                            mainMenu.links.map((link, index) =>
+                                                <li key={index}>
+                                                    <a href={link.url}>
+                                                        <Button variant={`ghost`} size={`lg`} className='w-full'>{link.url}</Button>
+                                                    </a>
+                                                </li>
+                                            )
+                                        }
                                     </ul>
                                 </div>
 

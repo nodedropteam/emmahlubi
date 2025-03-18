@@ -2,6 +2,7 @@ import React from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import Link from 'next/link'
+import { services, footer, resources, company } from '@/config/menu'
 
 export default function Footer() {
     return (
@@ -28,70 +29,49 @@ export default function Footer() {
                             </div>
                         </form>
                     </div>
-                    <div className="row grow flex flex-wrap gap-8">
+                    <div className="row grow flex flex-wrap justify-end gap-8">
                         <div className="wrapper w-[35%] md:w-[30%] grow">
                             <div id="services-menu" className='space-y-4'>
-                                <h4 className="title">Services</h4>
+                                <h4 className="title">{services.title}</h4>
                                 <ul className="space-y-2">
-                                    <li>
-                                        <Link href="/#accounting"
-                                        >Accounting</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/#payroll">Payroll</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/#tax-prep">Tax Preparation</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/#finance-advice">Consultation</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="wrapper w-[35%] md:w-[30%] grow">
-                            <div id="resources-menu" className='space-y-4'>
-                                <h4 className="title">Resources</h4>
-                                <ul className="space-y-2">
-                                    <li>Reports</li>
-                                    <li>Blog</li>
+                                    {
+                                        services.links.map((link, index) => (
+                                            <li key={index}>
+                                                <Link href={link.url}>{link.text}</Link>
+                                            </li>
+                                        ))
+                                    }
+
                                 </ul>
                             </div>
                         </div>
                         <div className="wrapper w-[35%] md:w-[30%] grow space-y-8">
-                            <div id="company-menu" className='space-y-4'>
-                                <h4 className="title">Company</h4>
-                                <ul className="space-y-2">
-                                    <li>
-                                        <Link href="/">Home</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/about-us">About Us</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/careers">Careers</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/faq">FAQ</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/client-portal">Client Portal</Link>
-                                    </li>
-                                </ul>
-                            </div>
+                            {
+                                (company.links.length > 0) && (
+                                    <div id="company-menu" className='space-y-4'>
+                                        <h4 className="title">{company.title}</h4>
+                                        <ul className="space-y-2">
+                                            {
+                                                company.links.map((link, index) => (
+                                                    <li key={index}>
+                                                        {/* <Link href={link.url}>{link.text}</Link> */}
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </div>
+                                )
+                            }
                             <div id="legal-menu" className='space-y-4'>
-                                <div className="title"></div>
+                                <h5 className="title">{footer.title}</h5>
                                 <ul className="text-sm">
-                                    <li>
-                                        <Link href="/terms-and-conditions"
-                                        >Terms and Conditions</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/privacy-policy">Privacy Policy</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/security">Security</Link>
-                                    </li>
+                                    {
+                                        footer.links.map((link, index) => (
+                                            <li key={index}>
+                                                <Link href={link.url}>{link.text}</Link>
+                                            </li>
+                                        ))
+                                    }
                                 </ul>
                             </div>
                         </div>
