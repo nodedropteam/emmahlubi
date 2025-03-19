@@ -13,7 +13,7 @@ export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className={`full content-grid fixed top-0 w-full h-[120px] 2xl:h-[200px] items-center z-[99] transition-colors duration-150 ${hasScrolledPast ? "text-secondary-foreground bg-secondary" : "bg-transparent"}`}>
+        <header className={`full content-grid fixed top-0 w-full h-[120px] 2xl:h-[200px] items-center z-[999] transition-colors duration-150 ${hasScrolledPast ? "text-secondary-foreground bg-secondary" : "bg-transparent"}`}>
             <div className="wrapper">
                 <div className="content flex flex-wrap justify-between items-center">
                     <Link href="/" className="logo block z-[100]">
@@ -41,7 +41,7 @@ export default function Header() {
                                             mainMenu.links.map((link, index) =>
                                                 <li key={index}>
                                                     <a href={link.url}>
-                                                        <Button variant={`ghost`} size={`lg`} className='w-full'>{link.url}</Button>
+                                                        <Button variant={`ghost`} size={`lg`} className='w-full justify-end' onClick={() => setIsOpen(false)}>{link.text}</Button>
                                                     </a>
                                                 </li>
                                             )

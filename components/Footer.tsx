@@ -64,7 +64,7 @@ export default function Footer() {
                             }
                             <div id="legal-menu" className='space-y-4'>
                                 <h5 className="title">{footer.title}</h5>
-                                <ul className="text-sm">
+                                <ul className="text-sm space-y-2">
                                     {
                                         footer.links.map((link, index) => (
                                             <li key={index}>

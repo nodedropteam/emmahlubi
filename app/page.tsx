@@ -5,13 +5,14 @@ import Form from 'next/form';
 import Image from "next/image";
 import { ourValues, services } from "@/content";
 import PatternBackground from "@/components/pattern-background";
+import Link from "next/link";
 
 export default function Home() {
     return (
         <>
             <section className="full px-4 relative">
                 <PatternBackground />
-                <div className="inner min-h-screen grid place-content-center">
+                <div className="relative inner min-h-screen grid place-content-center z-[99]">
                     <FadeIn>
                         <div className="stack space-y-4 text-center w-full mx-auto container">
                             <h1 className="font-semibold text-10xl">Your partners for finance and accounting solutions</h1>
@@ -21,9 +22,11 @@ export default function Home() {
                                 every step of the way.
                             </p>
 
-                            <a href="#cta-form">
-                                <Button>Meet an advisor</Button>
-                            </a>
+                            <div className="cta-row">
+                                <Link href="/#contact-us" className="block">
+                                    <Button>Meet an advisor today</Button>
+                                </Link>
+                            </div>
                         </div>
                     </FadeIn>
                 </div>
@@ -38,9 +41,9 @@ export default function Home() {
                                 <div className="stack space-y-4 grid justify-items-start max-w-sm py-12">
                                     <h2>{item.headline}</h2>
                                     <p>{item.description}</p>
-                                    <a href={`/#contact`}>
+                                    <Link href={`/#contact-us`}>
                                         <Button variant={`outline`}>Learn more</Button>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="content w-full md:w-[35%] grow relative flex">

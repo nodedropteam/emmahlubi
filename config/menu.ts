@@ -71,7 +71,7 @@ export const footer = {
             icon: "",
         },
         {
-            url: "/credits",
+            url: "/credit",
             text: "Image Credits",
             icon: "",
         },
