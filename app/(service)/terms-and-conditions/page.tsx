@@ -30,26 +30,31 @@ export default function DocxViewer() {
     }, [])
 
     return (
-        <div className="py-12 pt-[160px] max-w-[60ch]">
-            {loading && (
-                <div className="flex justify-center my-8">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-                </div>
-            )}
+        <>
+            <section>
+                <div className="inner py-24 pt-[160px]">
 
-            {error && !loading && (
-                <div className="p-4 border border-red-300 bg-red-50 text-red-700 rounded-md">{error}</div>
-            )}
+                    {loading && (
+                        <div className="flex justify-center my-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                        </div>
+                    )}
 
-            {content && !loading && (
-                <div>
-                    <div
-                        className="prose max-w-none"
-                        dangerouslySetInnerHTML={{ __html: content }}
-                    />
+                    {error && !loading && (
+                        <div className="p-4 border border-red-300 bg-red-50 text-red-700 rounded-md">{error}</div>
+                    )}
+
+                    {content && !loading && (
+                        <div className="stack max-w-[60ch]">
+                            <div
+                                className="prose max-w-none"
+                                dangerouslySetInnerHTML={{ __html: content }}
+                            />
+                        </div>
+                    )}
                 </div>
-            )}
-        </div>
+            </section>
+        </>
     )
 }
 

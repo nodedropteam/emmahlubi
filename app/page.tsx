@@ -32,10 +32,10 @@ export default function Home() {
                 </div>
             </section>
 
-            <div id="our-services" aria-hidden className="div"></div>
+            <div id="our-services" aria-hidden className="scroll-section"></div>
             {
                 services.map((item, index) => (
-                    <section id={item.scrollSection} key={index} className="service-card min-h-[500px] flex py-20">
+                    <section id={item.scrollSection} key={index} className="service-card min-h-[500px] flex py-20 scroll-section">
                         <div className={`stack flex flex-wrap w-full lg:max-w-[80%] mx-auto ${index / 2 === 0}`}>
                             <div className="content w-full md:w-[35%] grow">
                                 <div className="stack space-y-4 grid justify-items-start max-w-sm py-12">
@@ -62,7 +62,7 @@ export default function Home() {
                 ))
             }
 
-            <section id="our-values" className="py-28">
+            <section id="our-values" className="py-28 scroll-section">
                 <div className="inner space-y-12">
                     <div className="content max-w-[400px] space-y-2">
                         <h2>Empowering your success.</h2>

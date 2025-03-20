@@ -184,3 +184,6 @@
     animation: zoom 20s infinite ease-in-out;
 }
 
+.scroll-section {
+    scroll-margin-top: 120px;
+}
