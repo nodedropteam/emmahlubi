@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Form from 'next/form';
 import Image from "next/image";
-import { ourValues, services } from "@/content";
+import { ourValues, services } from "@/templates";
 import PatternBackground from "@/components/pattern-background";
 import Link from "next/link";
 
@@ -15,7 +15,9 @@ export default function Home() {
                 <div className="relative inner min-h-screen grid place-content-center z-[99]">
                     <FadeIn>
                         <div className="stack space-y-4 text-center w-full mx-auto container">
-                            <h1 className="font-semibold text-10xl">Your partners for finance and accounting solutions</h1>
+                            <h1 className="font-semibold text-10xl">
+                                Your partners for finance and accounting solutions
+                            </h1>
                             <p className="text-xl max-w-[60ch] mx-auto">
                                 Whether you're planning for growth, navigating compliance, or
                                 managing financial complexities, we are here to support you
