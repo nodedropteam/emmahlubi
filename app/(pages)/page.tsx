@@ -42,9 +42,11 @@ export default function Home() {
                                 <div className="stack space-y-4 grid justify-items-start max-w-sm py-12">
                                     <h2>{service.headline}</h2>
                                     <p>{service.description}</p>
-                                    <Link href={`/services/${service.name}`}>
-                                        <Button asChild variant={`outline`}>Learn more</Button>
-                                    </Link>
+                                    <Button asChild variant={`outline`}>
+                                        <Link href={`/services/${service.name}`}>
+                                            Learn more
+                                        </Link>
+                                    </Button>
                                 </div>
                             </div>
                             <div className="content w-full md:w-[35%] grow relative flex">
