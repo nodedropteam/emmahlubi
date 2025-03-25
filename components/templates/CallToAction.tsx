@@ -28,7 +28,7 @@ export default function CallToAction() {
                         className="stack flex gap-1 sm:justify-center flex-wrap sm:flex-nowrap max-w-lg mx-auto"
                     >
                         <Input type="text" name="email" placeholder="jdoe@email.com" />
-                        <Button asChild type="submit">Submit</Button>
+                        <Button type="submit">Submit</Button>
                     </div>
                 </Form>
             </div>
