@@ -25,12 +25,14 @@ export default function Header() {
                             {
                                 mainMenu.links.map((link, index) =>
                                     <li key={index}>
-                                        <Link href={link.url}>
-                                            <Button
-                                                // asChild
-                                                variant={`ghost`}
-                                                size={`sm`}>{link.text}</Button>
-                                        </Link>
+                                        <Button
+                                            asChild
+                                            variant={`ghost`}
+                                            size={`sm`}>
+                                            <Link href={link.url}>
+                                                {link.text}
+                                            </Link>
+                                        </Button>
                                     </li>
                                 )
                             }

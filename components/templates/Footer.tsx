@@ -16,7 +16,7 @@ export default function Footer() {
                                 Drop us your email to receive monthly updates from us!
                             </p>
                         </div>
-                        <form action="">
+                        <form>
                             <div className="row flex flex-col gap-1 flex-wrap items-start">
                                 <Input
                                     type="email"
