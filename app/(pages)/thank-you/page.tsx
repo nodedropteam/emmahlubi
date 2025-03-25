@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation"; // Use the Next.js hook
-import { sendEmail } from "@/server/sendEmail";
 import Image from "next/image";
+import { sendEmail } from "@/actions/Email/sendEmail";
 
 export default function ThankyouPage() {
     const searchParams = useSearchParams(); // Extract searchParams dynamically
