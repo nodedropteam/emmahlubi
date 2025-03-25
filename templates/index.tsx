@@ -46,7 +46,7 @@ export const services = [
         pageTitle: "Payroll Solutions for SME\'s",
         headline: "Payroll Solutions",
         description: "We help SMMEs overcome unique challenges with tailored solutions for growth, profitability, and long-term security.",
-        image: "/media/Manage money-pana.svg",
+        image: "/media/Manage_money-pana.svg",
         scrollSection: "payroll",
         insights: []
     },
@@ -64,7 +64,7 @@ export const services = [
         pageTitle: "Financial Consultation for SME\'s",
         headline: "Financial advisory for SMEs",
         description: "Strategic insights to drive growth, profitability and financial stability.",
-        image: "/media/Investment data-rafiki.svg",
+        image: "/media/Investment_data-rafiki.svg",
         scrollSection: "consultation",
         insights: []
     }
