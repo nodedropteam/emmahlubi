@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/templates/Header";
+import Footer from "@/components/templates/Footer";
 import { SuspenseProvider } from "@/components/SuspenseProvider";
 import SmoothScrollProvider from "@/components/smooth-scroll";
 import { siteConfig } from "@/config/site";
@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: siteConfig.title,
+    title: `${siteConfig.name} — ${siteConfig.title}`,
     description: siteConfig.description,
 };
 

@@ -33,47 +33,39 @@ export const ourValues = [
 
 export const services = [
     {
+        name: "accounting-and-bookkeeping",
+        pageTitle: "Accounting and Bookkeeping",
         headline: "Accounting and Bookkeeping",
         description: "Accurate and timely financial management to keep your business operations smooth and compliant.",
         image: "/media/Accountant-pana.svg",
         scrollSection: "accounting",
-        insights: [
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-        ]
+        insights: []
     },
     {
+        name: "payroll-solutions",
+        pageTitle: "Payroll Solutions for SME\'s",
         headline: "Payroll Solutions",
         description: "We help SMMEs overcome unique challenges with tailored solutions for growth, profitability, and long-term security.",
         image: "/media/Manage money-pana.svg",
         scrollSection: "payroll",
-        insights: [
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-        ]
+        insights: []
     },
     {
+        name: "tax-prepation",
+        pageTitle: "Tax Preparation and Compliance for SME\'s",
         headline: "Tax prep and compliance",
         description: "Expert guidance to navigate tax regulations, optimize deductions, and remain compliant.",
         image: "/media/Tax-amico.svg",
         scrollSection: "taxes",
-        insights: [
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-        ]
+        insights: []
     },
     {
+        name: "consultation",
+        pageTitle: "Financial Consultation for SME\'s",
         headline: "Financial advisory for SMEs",
         description: "Strategic insights to drive growth, profitability and financial stability.",
         image: "/media/Investment data-rafiki.svg",
         scrollSection: "consultation",
-        insights: [
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-            "Testing the features cards out add some figures.",
-        ]
+        insights: []
     }
 ]

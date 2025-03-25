@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react'
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import useScrollThreshold from '@/hooks/use-scroll';
 import { LuAlignRight } from "react-icons/lu";
 import Image from 'next/image';
@@ -27,6 +27,7 @@ export default function Header() {
                                     <li key={index}>
                                         <Link href={link.url}>
                                             <Button
+                                                // asChild
                                                 variant={`ghost`}
                                                 size={`sm`}>{link.text}</Button>
                                         </Link>
