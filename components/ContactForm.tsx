@@ -8,44 +8,40 @@ import { useEffect, useRef, useState, useTransition } from "react"
 
 type FormInputs = {
     emailContact: string
+    company?: string // Honeypot field
 }
 
 export default function ContactForm() {
     const { register, handleSubmit, formState } = useForm<FormInputs>()
     const [status, setStatus] = useState('')
     const [isPending, startTransition] = useTransition();
-
-    // Store timeout ID
     const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
     const onSubmit: SubmitHandler<FormInputs> = (data) => {
+        // 👇 Honeypot check
+        if (data.company?.trim()) {
+            setStatus('Spam detected. Message not sent.')
+            return
+        }
+
         startTransition(async () => {
             const res = await sendEmail(data.emailContact)
 
             if (res.success) {
                 setStatus('Email sent. We will get back to you shortly!')
 
-                // Clear any existing timeout
-                // if (timeoutRef.current) {
-                //     clearTimeout(timeoutRef.current)
-                // }
-
-                // // Set a new timeout
-                // timeoutRef.current = setTimeout(() => {
-                //     setStatus('')
-                // }, 2000) // <-- 2 seconds, not 2 ms
+                // Optional timeout to clear message
+                // if (timeoutRef.current) clearTimeout(timeoutRef.current)
+                // timeoutRef.current = setTimeout(() => setStatus(''), 2000)
             } else {
                 setStatus(res.error || 'Failed to send. Try again later.')
             }
-        });
+        })
     }
 
-    // Clear timeout on unmount
     useEffect(() => {
         return () => {
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current)
-            }
+            if (timeoutRef.current) clearTimeout(timeoutRef.current)
         }
     }, [])
 
@@ -57,9 +53,20 @@ export default function ContactForm() {
                         {...register("emailContact")}
                         placeholder="jdoe@email.com"
                     />
+
+                    {/* 👇 Honeypot Field - Hidden via CSS */}
+                    <input
+                        type="text"
+                        {...register("company")}
+                        autoComplete="off"
+                        tabIndex={-1}
+                        className="hidden"
+                    />
+
                     <Button type="submit">
                         {isPending ? `Sending...` : `Submit`}
                     </Button>
+
                     <p className="text-sm text-gray-600">{status}</p>
                 </div>
             </form>
