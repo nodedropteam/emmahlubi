@@ -32,7 +32,8 @@ export default function ThankyouPage() {
         <section className="full full-width-split-screen min-h-screen">
             <div className="content space-y-4 grid content-center justify-items-start py-12 max-md:pt-[100px]">
                 <h1>We got you!</h1>
-                <p>Thanks for reaching out, we will be in touch with a response within 48 hours.</p>
+                <p>Thanks for reaching out, we will be in touch with a response
+                    within 48 hours.</p>
                 {emailSent && <p className="text-(length:--text--1) text-gray-500">Confirmation email sent.</p>}
             </div>
             <div className="img-box relative h-96 md:h-full bg-primary">

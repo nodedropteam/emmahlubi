@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Form from 'next/form';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import ContactForm from '../ContactForm';
 
 export default function CallToAction() {
     return (
@@ -23,14 +24,7 @@ export default function CallToAction() {
             <div className="content text-center max-w-[768px] mx-auto space-y-4">
                 <h2>Let us keep you compliant, while you focus on growth.</h2>
                 <p>Leave us your email and we’ll contact you about our services.</p>
-                <Form action="/thank-you">
-                    <div
-                        className="stack flex gap-1 sm:justify-center flex-wrap sm:flex-nowrap max-w-lg mx-auto"
-                    >
-                        <Input type="text" name="email" placeholder="jdoe@email.com" />
-                        <Button type="submit">Submit</Button>
-                    </div>
-                </Form>
+                <ContactForm />
             </div>
         </section>
     )

@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
 import { services, footer, company } from '@/config/menu'
+import ContactForm from '../ContactForm'
 
 export default function Footer() {
     return (
-        <footer id="footer" className="full content-grid wrapper relative bg-secondary text-secondary-foreground snap-start">
+        <footer id="footer" className="full content-grid wrapper relative bg-secondary 
+        text-secondary-foreground snap-start">
             <div className="min-h-[80vh] py-20 flex flex-col justify-center">
                 <div className="row flex flex-wrap gap-20">
                     <div className="stack space-y-4">
@@ -16,36 +16,24 @@ export default function Footer() {
                                 Drop us your email to receive monthly updates from us!
                             </p>
                         </div>
-                        <form>
-                            <div className="row flex flex-col gap-1 flex-wrap items-start">
-                                <Input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    className="border-background"
-                                    placeholder="email"
-                                />
-                                <Button type="submit" variant={`default`}>Submit</Button>
-                            </div>
-                        </form>
+                        <ContactForm />
                     </div>
                     <div className="row grow flex flex-wrap justify-end gap-8">
-                        <div className="wrapper w-[35%] md:w-[30%] grow">
+                        <div className="wrapper w-full sm:w-[35%] md:w-[30%] grow">
                             <div id="services-menu" className='space-y-4'>
                                 <h4 className="title">{services.title}</h4>
                                 <ul className="space-y-2">
                                     {
                                         services.links.map((link, index) => (
                                             <li key={index}>
-                                                <Link href={link.url}>{link.text}</Link>
+                                                <Link className='leading-[16px] text-0' href={link.url}>{link.text}</Link>
                                             </li>
                                         ))
                                     }
-
                                 </ul>
                             </div>
                         </div>
-                        <div className="wrapper w-[35%] md:w-[30%] grow space-y-8">
+                        <div className="wrapper w-full sm:w-[35%] md:w-[30%] grow space-y-8">
                             {
                                 (company.links.length > 0) && (
                                     <div id="company-menu" className='space-y-4'>

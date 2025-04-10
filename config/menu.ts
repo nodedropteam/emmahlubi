@@ -25,17 +25,17 @@ export const services = {
     links: [
         {
             url: "/#accounting",
-            text: "Accounting",
-            icon: "",
-        },
-        {
-            url: "/#payroll",
-            text: "Payroll",
+            text: "Accounting & Bookkeeping",
             icon: "",
         },
         {
             url: "/#taxes",
-            text: "Taxes",
+            text: "Tax Preparation & Compliance",
+            icon: "",
+        },
+        {
+            url: "/#payroll",
+            text: "Payroll Solutions",
             icon: "",
         },
         {
