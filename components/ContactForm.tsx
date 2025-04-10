@@ -12,7 +12,7 @@ type FormInputs = {
 }
 
 export default function ContactForm() {
-    const { register, handleSubmit, formState } = useForm<FormInputs>()
+    const { register, handleSubmit } = useForm<FormInputs>()
     const [status, setStatus] = useState('')
     const [isPending, startTransition] = useTransition();
     const timeoutRef = useRef<NodeJS.Timeout | null>(null)

@@ -1,8 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Form from 'next/form';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import ContactForm from '../ContactForm';
 
 export default function CallToAction() {
