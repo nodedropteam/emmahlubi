@@ -13,16 +13,22 @@ export const sendEmail = async (email: string) => {
 
     try {
         const { data, error } = await resend.emails.send({
-            from: `onboarding@resend.dev`,
-            to: `admin@nodedropp.com`,
+            from: `admin@nodedropp.com`,
+            to: `admin@emmahlubi.co.za`,
             subject: `Contact from: ${email}`,
             html: `
             <p>Please send information to ${email} about the services of Emmahlubi!</p>
             `,
         })
-        return { success: true, msg: "Thank you for reaching out. We will get back to you shortly!" }
+        return {
+            success: true,
+            msg: "Thank you for reaching out. We will get back to you shortly!"
+        }
     } catch (error) {
         console.log('Email send error: ', error)
-        return { success: false, msg: "Something went wrong. Try again in a few minutes!" }
+        return {
+            success: false,
+            msg: "Something went wrong. Try again in a few minutes!"
+        }
     }
 }

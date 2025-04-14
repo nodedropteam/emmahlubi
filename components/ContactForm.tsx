@@ -48,7 +48,8 @@ export default function ContactForm() {
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="stack flex gap-1 sm:justify-center flex-wrap sm:flex-nowrap max-w-lg mx-auto">
+                <div className="stack flex gap-1 sm:justify-center flex-wrap 
+                sm:flex-nowrap max-w-lg mx-auto">
                     <Input
                         {...register("emailContact")}
                         placeholder="jdoe@email.com"
