@@ -62,6 +62,19 @@ export default function Footer() {
                                     }
                                 </ul>
                             </div>
+                            <div className="address space-y-2">
+                                <p className='font-bold'>Our Office</p>
+                                <p className='text-sm'>
+                                    5th Floor, Bloukrans Building <br />
+                                    Lynnwood Bridge <br />
+                                    Pretoria, 0081 <br />
+                                    South Africa
+                                </p>
+                            </div>
+                            <div className='contact space-y-2'>
+                                <div className='font-bold'>Telephone</div>
+                                <p className='text-sm'>013 140 0176</p>
+                            </div>
                         </div>
                     </div>
                 </div>

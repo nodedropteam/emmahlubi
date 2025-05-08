@@ -20,7 +20,8 @@ export default function Home() {
                             <p className="text-xl max-w-[60ch] mx-auto">
                                 Whether you're planning for growth, navigating compliance, or
                                 managing financial complexities, we are here to support you
-                                every step of the way.
+                                every step of the way. With over 25 years of industry
+                                experience, we are positioned to give you the best service.
                             </p>
 
                             <div className="cta-row">
